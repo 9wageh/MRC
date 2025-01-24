@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title Start-->
+  <title> MRC </title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <!-- sweetalert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Style  -->
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="contentLeft">
+      <div class="title">
+        <h2>Mortgage Calculator</h2>
+        <button onclick="clearAll()">Clear All</button>
+      </div>
+      <div class="mortgageCalc">
+        <div class="first-input">
+          <label for="mortgageAmount">Mortgage Amount</label>
+          <div class="inputIcon">
+            <span class="icon"><i class="fa-solid fa-sterling-sign"></i></span>
+            <input type="text" id="mortgageAmount" required>
+          </div>
+        </div>
+        <div class="otherInputs">
+          <div class="second-input">
+            <label for="mortgageTerm">Mortgage Term</label>
+            <div class="inputIcon">
+              <span class="icon">
+                <i class="fa-solid fa-calendar-days"></i> </span>
+              <input type="text" id="mortgageTerm" required>
+            </div>
+          </div>
+          <div class="third-input">
+            <label for="mortgageRate"> Interest Rate
+            </label>
+            <div class="inputIcon">
+              <span class="icon">
+                <i class="fa-solid fa-percent"></i> </span>
+              <input type="text" id="mortgageRate" required>
+            </div>
+          </div>
+        </div>
+        <!-- Form -->
+        <form>
+          <h3>Mortgage Type</h3>
+          <br>
+          <div class="btn btn-1">
+            <input type="radio" name="mortgageType" id="checkbox-1" value="Repayment" required>
+            <label for="checkbox-1">Repayment</label>
+          </div>
+          <br>
+          <div class="btn btn-2">
+            <input type="radio" name="mortgageType" id="checkbox-2" value="Interest Only" required>
+            <label for="checkbox-2"> Interest Only
+            </label>
+          </div>
+        </form>
+        <button id="calc-btn" onclick="calc()">
+          <img src="./assets/images/icon-calculator.svg" alt="">
+          Calculate Repayments
+        </button>
+
+      </div>
+    </div>
+    <div class="contentRight">
+      <div class="contentBefore">
+        <img src="./assets/images/illustration-empty.svg" alt="">
+        <h3> Results Shown Here
+        </h3>
+        <p>Complete the form and click “calculate repayments” to see what
+          your monthly repayments would be.
+        </p>
+      </div>
+
+    </div>
+    <div class="contentRight-2">
+      <div class="contentAfter">
+        <h3>Your Result</h3>
+        <h4> Your results are shown below based on the information you provided.
+          To adjust the results, edit the form and click “calculate repayments” again.</h4>
+        <div class="card">
+          <p> Your monthly repayments
+          </p>
+          <span id="total-1">0,00.00</span>
+          <hr>
+          <p> Total you'll repay over the term</p>
+          <span id="total-2">000,000.0</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

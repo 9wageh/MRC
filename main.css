@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", serif;
+}
+
+/* Variables Start */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --slate-100: hsl(202, 86%, 94%);
+    --slate-200: #95a0a6;
+    --slate-300: hsl(203, 41%, 72%);
+    --slate-500: hsl(200, 26%, 54%);
+    --slate-700: hsl(200, 24%, 40%);
+    --slate-900: hsl(202, 55%, 16%);
+}
+
+/* Variables End */
+body {
+    background: var(--slate-300);
+
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 0;
+    background: #fff;
+    border-radius: 25px;
+    display: flex;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+/* ContentLeft Start */
+
+
+.icon i {
+    transition: .8s;
+}
+
+.icon i:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.contentLeft {
+    width: 100%;
+    max-width: 50%;
+    padding: 50px 30px 20px 40px;
+}
+
+.container .contentLeft .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .contentLeft .title h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--slate-900);
+}
+
+.container .contentLeft .title button {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--slate-200);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.container .contentLeft .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .contentLeft .title h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--slate-900);
+}
+
+.container .contentLeft .title button {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--slate-200);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.container .contentLeft .title button:hover {
+    scale: 1.1;
+
+}
+
+/* Main Container */
+.mortgageCalc {
+    margin: 30px 0;
+}
+
+/* General Input Styles */
+.mortgageCalc input {
+    font-weight: bold;
+    font-size: 17px;
+    color: var(--slate-900);
+}
+
+input[type="text"]:focus {
+    border-color: hsl(61, 70%, 52%);
+    box-shadow: 0 0 8px hsl(61, 70%, 52%);
+
+}
+
+.first-input:has(input[type="text"]:focus).first-input .inputIcon::before,
+.second-input:has(input[type="text"]:focus).second-input .inputIcon::after,
+.third-input:has(input[type="text"]:focus).third-input .inputIcon::after {
+    background-color: hsl(61, 70%, 52%);
+}
+
+.first-input label,
+.second-input label,
+.third-input label {
+    display: block;
+    font-size: 12px;
+    color: var(--slate-200);
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+/* First Input Section */
+.first-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-input input {
+    width: 100%;
+    height: 40px;
+    padding-left: 55px;
+    border: 1.7px solid var(--slate-300);
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 0 8px var(--slate-300);
+    z-index: 2;
+    transition: .5s;
+}
+
+.first-input .inputIcon {
+    position: relative;
+    width: 100%;
+}
+
+.first-input .inputIcon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 1.7px;
+    transform: translateY(-50%);
+    width: 10%;
+    height: 100%;
+    background-color: var(--slate-300);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.first-input .inputIcon .icon {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: var(--slate-900);
+}
+
+/* Other Inputs Section */
+.otherInputs {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.otherInputs input {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border: 1.7px solid var(--slate-300);
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 0 8px var(--slate-300);
+    transition: .5s;
+}
+
+.otherInputs .inputIcon {
+    position: relative;
+    display: inline-block;
+}
+
+.otherInputs .inputIcon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 1.5px;
+    transform: translateY(-50%);
+    width: 20%;
+    height: 100%;
+    background-color: var(--slate-300);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.otherInputs.inputIcon.custom-bg::after {
+    background-color: hsl(4, 69%, 50%);
+}
+
+.otherInputs .icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: var(--slate-900);
+}
+
+form h3 {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--slate-200);
+    text-align: left;
+    margin: 25px 0 0;
+}
+
+form .btn {
+    display: flex;
+    align-items: center;
+    color: var(--slate-900);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid var(--slate-900);
+    border-radius: 4px;
+    transition: 1s;
+}
+
+form .btn label {
+    padding-left: 40px;
+}
+
+form input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+form .btn label {
+    position: relative;
+}
+
+form .btn label::before {
+    content: '';
+    width: 21px;
+    height: 21px;
+    border: 2px var(--slate-900) solid;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+form input[type="radio"]:checked+label::before {
+    border-color: hsl(61, 70%, 52%);
+    box-shadow: 0 0 8px hsl(61, 70%, 52%);
+
+}
+
+form input[type="radio"]:checked+label::after,
+form input[type="radio"]:not(:checked):hover+label::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: hsl(61, 70%, 52%);
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+form input[type="radio"]:not(:checked):hover+label::after {
+    opacity: 0.2;
+}
+
+form input[type="radio"]:checked+label {
+    color: hsl(61, 70%, 52%);
+}
+
+form .btn:has(input[type="radio"]:checked) {
+    border-color: hsl(61, 70%, 52%);
+    background-color: hsla(61, 70%, 52%, 0.2);
+}
+
+#calc-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 40px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--slate-900);
+    background-color: hsl(61, 70%, 52%);
+    border: none;
+    cursor: pointer;
+    transition: .8s;
+    margin: 50px 0 0;
+}
+
+#calc-btn:hover {
+    scale: 1.05;
+}
+
+/* ContentLeft End */
+/* ConetntRight start */
+.contentRight {
+    width: 100%;
+    max-width: 50%;
+    padding: 0 20px;
+    background-color: var(--slate-900);
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.contentRight .contentBefore h3 {
+    margin: 10px 0;
+    color: var(--white);
+}
+
+.contentRight .contentBefore p {
+    margin: 10px 0;
+    font-weight: 200;
+    color: var(--slate-100);
+}
+
+.contentRight-2 {
+    display: none;
+    width: 100%;
+    max-width: 50%;
+    padding: 40px 30px 0;
+    background-color: var(--slate-900);
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.contentRight-2 h3 {
+    font-size: 22px;
+    color: #fff;
+}
+
+.contentRight-2 .contentAfter h4 {
+    margin: 25px 0;
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--slate-100);
+}
+
+.contentRight-2 .contentAfter .card::before {
+    content: "";
+    height: 6px;
+    width: 100%;
+    background-color: hsl(61, 70%, 52%);
+    position: absolute;
+    top: 1px;
+    left: 0;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.contentRight-2 .contentAfter .card {
+    padding: 30px;
+    background-color: #0e2431;
+    border-radius: 10px;
+    position: relative;
+    z-index: 5;
+}
+
+.contentRight-2 .contentAfter .card p {
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--slate-100);
+    margin-bottom: 10px;
+}
+
+.contentRight-2 .contentAfter .card #total-1::before,
+.contentRight-2 .contentAfter .card #total-2::before {
+    content: "£ ";
+}
+
+.contentRight-2 .contentAfter .card #total-1 {
+    color: hsl(61, 70%, 52%);
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.contentRight-2 hr {
+    color: var(--slate-200);
+    margin: 20px 20px;
+}
+
+.contentRight-2 .contentAfter .card #total-2 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+/* ConetntRight end */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .contentLeft {
+        max-width: 100%;
+        padding: 30px 20px;
+
+    }
+
+    .container .contentLeft .title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .first-input .inputIcon::before {
+        width: 15%;
+    }
+
+    .otherInputs .inputIcon::after {
+        width: 30%;
+    }
+
+    #calc-btn {
+        padding: 12px 16px;
+        width: 100%;
+        margin: 25px 0 0;
+    }
+
+    .contentRight {
+        max-width: 100%;
+        border-radius: 0;
+        padding: 20px 30px;
+        line-height: 1.8;
+        display: none;
+    }
+
+    .contentRight-2 {
+        max-width: 100%;
+        display: block;
+        border-radius: 0;
+
+    }
+
+    .contentRight-2 .contentAfter .card #total-1 {
+        font-size: 30px;
+    }
+
+    .contentRight-2 hr {
+        margin: 20px 5px;
+    }
+}
