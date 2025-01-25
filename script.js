@@ -36,7 +36,12 @@ function calc() {
             totalOne.innerHTML = (monthlyPayment.toFixed(2)).toLocaleString('en-US');
             totalTwo.innerHTML = (monthlyPayment.toFixed(2) * term * 12).toLocaleString('en-US');
         } else {
-            window.alert("Please select a mortgage type.");
+                     Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please select a mortgage type.!",
+        });
+
         }
     }
 }
