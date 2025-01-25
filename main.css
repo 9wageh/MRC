@@ -473,6 +473,7 @@ form .btn:has(input[type="radio"]:checked) {
         padding: 12px 16px;
         width: 100%;
         margin: 25px 0 0;
+        text-align:center;
     }
 
     .contentRight {
