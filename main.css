@@ -461,7 +461,10 @@ form .btn:has(input[type="radio"]:checked) {
     .first-input .inputIcon::before {
         width: 15%;
     }
+ .first-input input {
+        padding-left: 70px;
 
+    }
     .otherInputs .inputIcon::after {
         width: 30%;
     }
