@@ -27,6 +27,8 @@ function calc() {
         let denominator = power - 1;
         contentRight.style.display = "none";
         contentRightTwo.style.display = "block";
+        // Scroll to top after submitting ticket
+        window.scrollTo({ top: 0, behavior: "smooth" });
         if (repaymentCheckbox.checked) {
             let monthlyPayment = amount * (numerator / denominator);
             totalOne.innerHTML = (monthlyPayment.toFixed(2)).toLocaleString('en-US');
